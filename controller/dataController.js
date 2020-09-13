@@ -1,14 +1,15 @@
 const SerialPort = require('serialport')
 const Readline = require('@serialport/parser-readline')
+const usbPort = new SerialPort('/dev/ttyACM0', { baudRate: 115200 })
 
 const getData = async (req, res) => {
   try { 
-    const usbPort = new SerialPort('/dev/ttyACM0', { baudRate: 115200 })
     const parser = new Readline()
-    port.pipe(parser)
-    port.write('hola \n')
+    usbPort.pipe(parser)
+    usbPort.write('hola \n')
     parser.on('data', (data) => {
-      console.log(data)
+      parser.end()
+      res.status(200).send(data)
     })
 
   } catch(e) {
