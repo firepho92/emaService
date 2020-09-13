@@ -4,7 +4,7 @@
   "description": "rpi server to fetch microbit data and images from rpi-cam",
   "main": "index.js",
   "scripts": {
-    "node": "nodemon index.js",
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Alex Aguilar Creeas CCTA",
