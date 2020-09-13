@@ -6,6 +6,8 @@ const routes = require('./routes')
 const app = express()
 const port = 8000
 
+app.use(morgan('combined'))
+
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 
