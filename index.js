@@ -5,10 +5,6 @@ const usbPort = new SerialPort('/dev/ttyACM0', { baudRate: 115200 })
 const app = express()
 const port = 8000
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
-
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
