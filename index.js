@@ -1,6 +1,8 @@
 const express = require('express')
 const SerialPort = require('serialport')
 const readline = require('@serialport/parser-readline')
+const bodyParser = require('body-parser')
+
 const routes = require('./routes')
 const usbPort = new SerialPort('/dev/ttyACM0', { baudRate: 115200 })
 const app = express()
